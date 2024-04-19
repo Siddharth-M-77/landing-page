@@ -15,7 +15,7 @@ body {
 body {
     font-size: 62.5%;
     font-family: sans-serif;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* reuseable-code */
