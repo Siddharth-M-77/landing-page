@@ -650,7 +650,7 @@ h4 {
         .footer {
 
             min-height: 100vh;
-            /* padding-top: 30rem; */
+            padding-top: 30rem;
             width: 100%;
             background-color: #dadada;
             display: flex;
