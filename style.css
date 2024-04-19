@@ -52,14 +52,14 @@ nav {
 
 nav .logo {
     height: 4rem;
-    width: 9rem;
+    width: auto;
     margin-left: 3rem;
 
 }
 
 nav .logo img {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
     object-position: center;
 
@@ -112,6 +112,7 @@ nav .nav-right h4:nth-child(5) {
     position: relative;
 
 }
+
 
 .container .banner .bottom-box {
     height: 10rem;
@@ -172,7 +173,7 @@ nav .nav-right h4:nth-child(5) {
     background-image:
         url('https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBpY3R1cmUlMjBmb3IlMjBiYW5uZXJ8ZW58MHx8MHx8fDA%3D');
     height: 15rem;
-    width: 30rem;
+    width: 24rem;
     outline: none;
     border: none;
     background-image: cover;
@@ -191,6 +192,7 @@ nav .nav-right h4:nth-child(5) {
     justify-content: center;
     flex-direction: column;
     margin-top: 4rem;
+    width: 100%;
 }
 
 .center .category h1 {
@@ -211,7 +213,7 @@ nav .nav-right h4:nth-child(5) {
     align-items: center;
     column-gap: 2rem;
     margin-top: 4rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .img {
@@ -257,6 +259,7 @@ nav .nav-right h4:nth-child(5) {
     justify-content: center;
     position: relative;
     margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .circel::before {
@@ -291,10 +294,10 @@ nav .nav-right h4:nth-child(5) {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 1rem;
     width: 30%;
     position: relative;
-    margin-left: 20rem;
+    /* margin-left: 20rem; */
 }
 
 .circle-placeholders #circle-left,
@@ -311,10 +314,11 @@ nav .nav-right h4:nth-child(5) {
     content: "";
     position: absolute;
     height: 2px;
-    width: 80%;
+    width: 60%;
     background-color: #000;
-    left: -80%;
+    left: -60%;
     top: 35%;
+
 }
 
 .circle-placeholders p {
@@ -335,9 +339,10 @@ nav .nav-right h4:nth-child(5) {
     justify-content: space-between;
     margin-bottom: 5rem;
     padding: 2rem 15rem;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     margin-top: 5rem;
+    gap: 1rem;
 }
 
 .delivery-info .info {
@@ -379,25 +384,20 @@ h4 {
 
 .cards-container {
     width: 100%;
-    height: 100%;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
     gap: 5rem;
-    /* display: grid;
-    grid-template-columns: repeat(2,1fr) ; */
-    /* align-items: center;
-    justify-content: center; */
+
 }
 
 .testomonial-section .card {
     display: flex;
     align-items: center;
-    /* height: 25rem; */
     width: 25vw;
-    margin: 0 5rem;
     margin-top: 3rem;
-
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 1);
@@ -413,8 +413,9 @@ h4 {
 }
 
 .testomonial-section .card p {
-    font-size: 1rem;
-    width: 50%;
+    font-size: 0.7rem;
+
+    padding: 0 2rem;
 
 }
 
@@ -438,8 +439,8 @@ h4 {
 }
 
 .testomonial-section .card .card-img img {
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
@@ -450,7 +451,7 @@ h4 {
 }
 
 .footer {
-    height: 25vh;
+    height: auto;
     width: 100%;
     background-color: #dadada;
     margin-top: 5rem;
@@ -458,6 +459,7 @@ h4 {
     align-items: center;
     justify-content: space-around;
     gap: 3rem;
+    margin-bottom: 4rem;
 }
 
 .footer .footer-data1 {
@@ -506,36 +508,158 @@ h4 {
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
 
-    /* Adjustments for smaller screens */
+    #main {
+        overflow-x: hidden;
+    }
+
     nav {
-        display: none;
-    }
-
-    .container {
-        width: 100vw;
-        height: 30rem;
-
-    }
-
-    .banner {
-        width: 100%;
-
-    }
-
-
-
-    .center .image-container {
-        grid-template-columns: 1fr;
-        margin-top: 5rem;
-    }
-
-    .category {
-        margin-top: 2rem;
-    }
-
-    .footer .footer-data1 {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+
+        height: auto;
     }
-}
+
+        nav .logo {
+            margin-bottom: 1rem;
+            /* Add space below logo */
+        }
+
+        nav .nav-right {
+            justify-content: center;
+            width: 100%;
+            padding: 0 2rem;
+            /* Remove right margin */
+        }
+
+        nav .nav-right h4 {
+            opacity: 1;
+            font-size: 10px;
+        }
+
+
+        .container .banner .bottom-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            height: auto;
+            padding: 1rem 0rem;
+            width: 80%;
+            max-width: none;
+
+        }
+
+        .container .banner .bottom-box h3 {
+            font-size: 0.8rem;
+            text-transform: capitalize;
+        }
+
+        #s1,
+        #s2 {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-style: 0.8rem;
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            -ms-border-radius: 0.5rem;
+            -o-border-radius: 0.5rem;
+        }
+
+        .center .image-container {
+
+            margin-top: 15rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+
+
+        }
+
+        .box {
+            height: 10rem;
+            width: 16rem;
+        }
+
+
+        .center .category h1 {
+            font-size: 2rem;
+        }
+
+        .center .category p {
+            text-transform: uppercase;
+            margin-top: 2rem;
+            font-style: 1rem;
+            font-weight: 700;
+        }
+
+        .category-image {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 3rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .delivery-info {
+            height: 30%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .delivery-info .info i,
+        h4 {
+            font-size: 1rem;
+        }
+
+        .circle-container {
+            display: none;
+        }
+
+        .cards-container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 5rem;
+        }
+
+        .testomonial-section .card {
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+
+        }
+
+        .testomonial-section .card .card-img {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .footer {
+
+            min-height: 100vh;
+            /* padding-top: 30rem; */
+            width: 100%;
+            background-color: #dadada;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+
+    }
